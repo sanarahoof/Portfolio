@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sana | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+/* ===== GENERAL ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(54, 53, 53);
+    padding: 20px 60px;   /* increased padding */
+    height: 20px;
+}
+
+/* BIG SANA TEXT */
+.logo {
+    font-size: 32px;      /* increase size */
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.logo:hover {
+    color: #ff6600;
+    transform: scale(1.1);
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}/* ===== HERO SECTION ===== */
+.hero {
+    height: 50vh;
+    background: linear-gradient(135deg, #ff6600, #ff9966);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+/* Fade In Animation */
+.hero-content {
+    animation: fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading Animation */
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    color: #000000;
+    animation: slideLeft 1.5s ease;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-content h1 span {
+    color: #090909;
+}
+
+/* Subtitle */
+.hero-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    animation: slideRight 1.8s ease;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Paragraph */
+.hero-content p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons .btn {
+    text-decoration: none;
+    background: white;
+    color: #ff6600;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero-buttons .btn:hover {
+    background: #222;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: #ff6600;
+}
+/* ===== ABOUT SECTION ===== */
+
+/* ===== ABOUT SECTION ===== */
+
+.about {
+    padding: 80px 20px;
+    background: linear-gradient(to right, #f8f9fa, #eef2f3);
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.about span {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/* ===== PROJECT SECTION ===== */
+.projects h2 {
+    color: #ff6a00;   /* change this color */
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: #ff5c00;
+    margin: 10px auto 50px;
+    border-radius: 5px;
+}
+
+
+
+.projects {
+    padding: 80px 10%;
+    background: #f8f8f8;   /* Same background everywhere */
+    /* color: #ff6a00; */
+   
+}
+
+.project-title {
+    font-size: 40px;
+    color: #ffba92;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* ===== PROJECT CARD ===== */
+.project-card {
+    width: 350px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: #ff6a00;
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.view-btn {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ff6a00;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #ff6a00;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #ff6a00;
+    color: white;
+}
+
+.skills-section {
+    padding: 80px 10%;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 40px;
+    color: #ff5c00;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.title-underline {
+    width: 80px;
+    height: 4px;
+    background: #ff5c00;
+    margin: 10px auto 50px;
+    border-radius: 5px;
+}
+
+/* GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+    align-items: center;
+}
+
+.skill-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.skill-item img {
+    width: 70px;
+    height: auto;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+</style>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="logo">Sana</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+    <div class="hero-content">
+        <h1>Hi, I'm <span>Sana</span></h1>
+        <h2>Python Full Stack Developer</h2>
+        <p>
+            I build modern, responsive, and scalable web applications 
+            using Python, Django, and modern front-end technologies.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View My Work</a>
+            <!-- <a href="#contact" class="btn btn-outline">Hire Me</a> -->
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="about">
+    <!-- <div class="about-container"> -->
+        <h2>About Me</h2>
+        <p>
+            I'm <strong>Sana</strong>, a motivated and detail-oriented Python Full Stack Developer 
+            with practical internship experience in designing and developing web applications.
+        </p>
+
+        <p>
+            I have experience working with front-end technologies like 
+            <strong>HTML, CSS, and Bootstrap</strong> and back-end technologies 
+            such as <strong>Python, Django, and MySQL</strong>.
+        </p>
+
+        <p>
+            I am passionate about writing clean code, creating responsive designs, 
+            and building secure, efficient backend systems. I continuously seek 
+            opportunities to learn new technologies and enhance my development skills.
+        </p>
+    <!-- </div> -->
+</section>
+<section id="projects" class="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-container">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="images\Screenshot 2026-02-23 214753.png" alt="Crocs Website">
+
+            <div class="project-content">
+                <h3>Crocs Website</h3>
+                <p>A fully responsive e-commerce website built using HTML, CSS, Bootstrap and JavaScript.</p>
+                <a href="https://sanarahoof.github.io/crocs/" target="_blank" class="view-btn">
+                    View Project
+                </a>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="images\Screenshot 2026-02-23 220303.png" alt="Milky Mist Website">
+
+            <div class="project-content">
+                <h3>Milky-Mist</h3>
+                <p>A fully responsive e-commerce website built using HTML, CSS, Bootstrap and JavaScript.</p>
+                <a href="https://sanarahoof.github.io/Milky-Mist/" target="_blank" class="view-btn">
+                    View Project
+                </a>
+            </div>
+        </div>
+
+
+         <!-- Project 1 -->
+        <div class="project-card">
+            <img src="images\BANNER_1u0s-qu.avif" alt="myG Website">
+
+            <div class="project-content">
+                <h3>myG Website</h3>
+                <p>A fully responsive e-commerce website built using HTML, CSS, Bootstrap and JavaScript.</p>
+                <a href= "https://sanarahoof.github.io/myG/" target="_blank" class="view-btn">
+                    View Project
+                </a>
+            </div>
+        </div>
+
+
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="images\python-course-in-sinet-institute (1).webp" alt="SINET">
+
+            <div class="project-content">
+                <h3>SINET</h3>
+                <p>A fully responsive e-commerce website built using HTML, CSS, Bootstrap and JavaScript.</p>
+                <a href="https://sanarahoof.github.io/sinet/" target="_blank" class="view-btn">
+                    View Project
+                </a>
+            </div>
+        </div>
+
+         <!-- Project 2 -->
+        <div class="project-card">
+            <img src="images/Screenshot 2026-02-24 140840.png" alt="Event-Mgician">
+
+            <div class="project-content">
+                <h3>Event-Mgician</h3>
+                <p>A fully responsive e-commerce website built using HTML, CSS, Bootstrap and JavaScript.</p>
+                <a href= "https://sanarahoof.github.io/Event-Mgician/" target="_blank" class="view-btn">
+                    View Project
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<section id="skills" class="skills-section">
+
+    <h2 class="skills-title">MY SKILLS</h2>
+    <div class="title-underline"></div>
+
+    <div class="skills-grid">
+
+        <div class="skill-item">
+            <img src="images/OIP (1).jpg" alt="HTML">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/OIP (2).jpg" alt="CSS">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/OIP (3).jpg" alt="JavaScript">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/OIP (4).jpg" alt="MongoDB">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/OIP (5).jpg" alt="React">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/OIP (6).jpg" alt="Bootstrap">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/OIP.jpg" alt="Postman">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/html-5-2.png" alt="NodeJS">
+        </div>
+
+        <div class="skill-item">
+            <img src="images/OIP (7).jpg" alt="Express">
+        </div>
+
+       
+
+    </div>
+
+</section>
+</body>
+</html>

@@ -352,26 +352,33 @@ body {
 /* ============================= */
 /* 📱 MOBILE RESPONSIVE DESIGN */
 /* ============================= */
+/* 
+@media(max-width:768px){
 
-@media (max-width: 992px) {
-
-    /* Navbar Fix */
-    .navbar {
-        padding: 15px 20px;
-        flex-direction: column;
-        height: auto;
+    .menu-toggle{
+        display:block;
     }
 
-    .navbar ul {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 15px;
-        padding-left: 0;
+    .nav-links{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#363535;
+        flex-direction:column;
+        text-align:center;
+        display:none;
+        padding:20px 0;
     }
 
-    .navbar ul li {
-        list-style: none;
+    .nav-links li{
+        margin:15px 0;
     }
+
+    .nav-links.active{
+        display:flex;
+    }
+} */
 
     /* Hero Section */
     .hero {
@@ -406,7 +413,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
     }
-}
+
 
 /* Small Mobile */
 @media (max-width: 576px) {
@@ -468,22 +475,18 @@ body {
 
 <body>
 
-    <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
-        <div class="logo">Sana</div>
+    <div class="logo">Sana</div>
 
-         <!-- Hamburger Icon -->
-    <div class="menu-toggle" id="menu-toggle">
-        ☰
-    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-        </ul>
-    </nav>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+    </ul>
+</nav>
 
     <!-- ===== HERO SECTION ===== -->
     <section class="hero">

@@ -23,7 +23,7 @@ body {
     align-items: center;
     background: rgb(54, 53, 53);
     padding: 20px 60px;   /* increased padding */
-    height: 20px;
+    /* height: 20px; */
 }
 
 /* BIG SANA TEXT */
@@ -349,13 +349,134 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
+/* ============================= */
+/* 📱 MOBILE RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    /* Navbar Fix */
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+        padding-left: 0;
+    }
+
+    .navbar ul li {
+        list-style: none;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    /* Projects */
+    .projects {
+        padding: 60px 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===== HAMBURGER MENU ===== */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* Mobile Style */
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#222;
+        width:100%;
+        flex-direction:column;
+        text-align:center;
+        display:none;
+        padding:20px 0;
+    }
+
+    .nav-links li{
+        margin:15px 0;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+}
+
 </style>
+
+
 
 <body>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
         <div class="logo">Sana</div>
+
+         <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
         <ul>
             <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
@@ -526,5 +647,14 @@ body {
     </div>
 
 </section>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
 </body>
 </html>
